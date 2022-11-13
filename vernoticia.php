@@ -11,7 +11,6 @@
     <?php
         include('cabecera.php');
     ?>
-    <!--columnas de noticias y anuncios-->
     <div id="body_main">
         <?php
             $con=mysqli_connect('localhost','root','toor2022','notiweb');

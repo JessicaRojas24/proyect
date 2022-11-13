@@ -21,9 +21,7 @@
                 $sql="select * from noticias Where id=1";
         ?>
         <div id="main_new">
-            <div> <img class="image" height='400' src="noticias/<?php echo $r['Imagen']?>"></div>
-        </div>
-        <div>
+            <div> <img class="img_news" height='400' src="noticias/<?php echo $r['Imagen']?>"></div>
             <h2 class="title" > <?php echo $r['Titulo'] ?> </h2>
             <div> <?php echo $r['Nombre'] ?></div>
             <p class="text"> <?php echo $r['Cuerpo'] ?></p>
@@ -32,7 +30,7 @@
         <?php
             }
         ?>
-
+        <!--columnas de noticias y anuncios-->
         <div class="main_colums">
             <div id="news">
             <?php
@@ -58,6 +56,9 @@
             <?php
                 }
             ?>
+            </div>
+            <div id="anuncios">
+                <img class="img_news" src="https://lh3.googleusercontent.com/nupo3HWMIUeuul9r2IBSfpBo568bL-STG9nA71dUuW97DnhAXFgm2WWjczhTFqRHQZRf5VA-_PmxIZaIAXhOUrzfr5unPjFuW9za=w0" height="150px">
             </div>
         </div>
 
