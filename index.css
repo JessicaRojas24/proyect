@@ -8,10 +8,9 @@
 
 }
 nav{
-    background: #e297af;
+    background: #460024;
     height: 80px;
     width: 100%;
-    margin-bottom: 2rem;
 }
 .enlace{
     position: absolute;
@@ -37,7 +36,7 @@ nav ul li a{
     text-transform: uppercase;
 }
 li a.active, li a:hover{
-    background: #d1eb26;
+    background: #69113E;
     transition: .5s;
 }
 .checkbtn{
@@ -85,8 +84,45 @@ li a.active, li a:hover{
 #pie {
     padding: 20px;
     padding-bottom: 50px;
+    padding-top: 50px;
     text-align: left;
     color: whitesmoke;
-    background: linear-gradient(90deg, #000 0%, #000 88%, #fff 100%);
-    column-count: 2;
+    background: linear-gradient(0deg, #460024 88%, #8C2F5E 100%);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.img_footer{
+    align-items: center;
+}
+
+.btn_Leer {
+    border-radius: 10px;
+    background: #460024;
+    padding: 8px 20px 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn_Leer:hover {
+    background: #AF5784;
+    text-decoration: none;
+}
+
+button{
+    border: none;
+}
+
+#body_main{
+    padding: 20px;
+    background-color: #8C2F5E;
+}
+
+.main_colums {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
 }

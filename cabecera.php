@@ -6,15 +6,15 @@
     <link rel="icon" href="noticias/ico.png">
 </head>
 <body>
-<div style='background-color:orange'>
+<div>
 <nav>
         </label>
         <a href="#" class="enlace">
-            <img src="noticias/log.png" alt="" class="logo">
+            <img src="https://publicsite-wordpress-storage.insiderintelligence.com/wp-content/uploads/2022/09/14151149/cheddarNEWS_primary_hor.png" alt="" class="logo">
         </a>
         <ul>
             <li><a class="active" href="#">Inicio</a></li>
-            <li><a href="#">Categoria</a></li>
+            <li><a href="#news">Mas noticias</a></li>
             <li><a href="#">Novedades</a></li>
             <li><a href="#">Conócenos</a></li>
         </ul>
@@ -22,4 +22,3 @@
     </div>
 </body>
 </html>
-<div align="center"><img src="noticias/logo.png" height="100" width="250"></div>

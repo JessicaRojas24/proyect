@@ -10,33 +10,34 @@
 <body>
     <?php
         include('cabecera.php');
-        $con=mysqli_connect('localhost','root','toor2022','notiweb');
-        $myid=intval($_GET['id']);
-        $sql="select * from noticias Where id={$myid}";
-        $result = mysqli_query($con, $sql);
-        while($r = mysqli_fetch_assoc($result))
-        {
-           
+    ?>
+    <!--columnas de noticias y anuncios-->
+    <div id="body_main">
+        <?php
+            $con=mysqli_connect('localhost','root','toor2022','notiweb');
             $myid=intval($_GET['id']);
             $sql="select * from noticias Where id={$myid}";
-    ?>
-
-                <div>
-                    <div> <img class="image" height='400' src="noticias/<?php echo $r['Imagen']?>"></div>
-                </div>
-                <div>
-                    <h2 class="title" > <?php echo $r['Titulo'] ?> </h2>
-                    <div> <?php echo $r['Nombre'] ?></div>
-                    <p class="text"> <?php echo $r['Cuerpo'] ?></p>
-
-                </div>
-
-            </div>
+            $result = mysqli_query($con, $sql);
+            while($r = mysqli_fetch_assoc($result))
+            {
+            
+                $myid=intval($_GET['id']);
+                $sql="select * from noticias Where id={$myid}";
+        ?>
+        <div>
+            <div> <img class="image" height='400' src="noticias/<?php echo $r['Imagen']?>"></div>
+        </div>
+        <div>
+            <h2 class="title" > <?php echo $r['Titulo'] ?> </h2>
+            <div> <?php echo $r['Nombre'] ?></div>
+            <p class="text"> <?php echo $r['Cuerpo'] ?></p>
+        </div>
                 
-            <?php
-        }
-                include('pie.php');
-            ?>
+        <?php
+            }
+        ?>
+    </div>
+    <?php include('pie.php');?>
 </body>
 </html>
 
