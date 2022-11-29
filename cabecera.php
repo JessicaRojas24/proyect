@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> Al Día</title>
+    <title> cheddar news</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="noticias/ico.png">
+    <link rel="icon" href="https://cdn-profiles.tunein.com/s296280/images/logog.png?t=161851.png">
 </head>
 <body>
 <div>
@@ -14,9 +14,10 @@
         </a>
         <ul>
             <li><a class="active" href="#">Inicio</a></li>
-            <li><a href="#news">Mas noticias</a></li>
+            <li><a href="#news">Más noticias</a></li>
             <li><a href="#">Novedades</a></li>
             <li><a href="#">Conócenos</a></li>
+            <li><a href="login.php"><img class="icon_login" src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" height="40px" width="40px"></a></li>
         </ul>
     </nav>
     </div>

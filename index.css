@@ -4,7 +4,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: 'Silkscreen', cursive;
+    font-family: 'Poiret One', cursive;
 
 }
 nav{
@@ -55,8 +55,9 @@ li a.active, li a:hover{
 }
 
 #body_main{
-    padding: 40px;
+    padding: 60px;
     background-color: #8C2F5E;
+    
 }
 
 #main_new{
@@ -84,27 +85,36 @@ li a.active, li a:hover{
     background-color: #69113E;
     border-radius: 10px;
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 25px;
+
 }
 
 .text {
     line-height: 2;
     font-size: 20px;
     text-align: justify;
+    color:black;
+    
 }
 
 .title {
     text-align: left;
+    color:black;
 }
 
 .image {
     display: block;
+    border: 6px outset #353535;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 
 .img_news{
     border: 6px outset #353535;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 #pie {
@@ -121,6 +131,7 @@ li a.active, li a:hover{
 
 .img_footer{
     align-items: center;
+
 }
 
 .btn_Leer {
@@ -146,4 +157,57 @@ button{
     grid-template-rows: 1fr;
     grid-column-gap: 25px;
     grid-row-gap: 20px;
+}
+
+#body_login{
+    background-color: #8C2F5E;
+    
+}
+
+#main_login{
+    text-align: center;
+    background-color: #69113E;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 60px;
+    margin-left: 450px;
+    margin-right: 450px;
+    height: 100%;
+}
+
+#img_login{
+    border: 6px outset #353535;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display:block;
+    margin:auto;
+}
+
+.btn_user {
+    border-radius: 10px;
+    background: #460024;
+    padding: 8px 20px 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn_pass {
+    border-radius: 10px;
+    background: #460024;
+    padding: 8px 20px 10px 20px;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn_submit {
+    border-radius: 10px;
+    background: #460024;
+    padding: 8px 20px 10px 20px;
+    text-decoration: none;
+    color: white;
+    
+}
+.icon_login {
+    padding-top: 1rem;
 }
