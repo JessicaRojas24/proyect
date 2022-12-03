@@ -11,9 +11,15 @@ body {
 div.table-title {
     display: block;
     margin: auto;
-    max-width: 600px;
+    max-width: 1200px;
     padding: 5px;
     width: 100%;
+    column-count: 2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
 }
 
 .table-title h3 {
@@ -26,6 +32,24 @@ div.table-title {
     text-transform: uppercase;
 }
 
+.submit {
+    background-color: #AF5884;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .submit:active {
+    background-color: #06b;
+  }
+
 
 /*** Table Styles **/
 
@@ -35,7 +59,7 @@ div.table-title {
     border-collapse: collapse;
     height: 320px;
     margin: auto;
-    max-width: 600px;
+    max-width: 1200px;
     padding: 5px;
     width: 100%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);

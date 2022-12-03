@@ -32,7 +32,12 @@
 
     ?>
     <div class="table-title">
-        <h3>Tabla de noticias</h3>
+        <div>
+            <h3>Tabla de noticias</h3>
+        </div>
+        <div>
+            <a href='agregar_noticia.php'><button class="submit" type='submit'><i class="fa-sharp fa-solid fa-plus"></i>    Agregar Noticia</button></a>
+        </div>
     </div>
     <table class="table-fill">
         <thead>

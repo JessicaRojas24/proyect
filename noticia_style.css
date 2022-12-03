@@ -21,6 +21,12 @@ body {
     font-family: sans-serif;
     font-size: 36px;
     font-weight: 600;
+    column-count: 2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
   }
   
   .subtitle {
@@ -142,9 +148,9 @@ body {
     color: #eee;
     cursor: pointer;
     font-size: 18px;
-    height: 30px;
+    height: 40px;
     margin-top: 10px;
     text-align: center;
-    width: 12%;
+    width: 100%;
   }
   

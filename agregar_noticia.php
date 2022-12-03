@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="noticia_style.css">
+    <script src="https://kit.fontawesome.com/c49750f9a4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -46,9 +47,13 @@ if(isset($_POST['titulo']))
         Imagen: <input type="text" name='imagen' size='100'><br>
         <input type='submit' value='Guardar'>
     </form>-->
-    <a href="admin.php"><button class="return" type='submit'><img src="https://static.vecteezy.com/system/resources/previews/014/441/303/non_2x/media-skip-backward-icon-3d-design-for-application-and-website-presentation-png.png" height="30px"></button></a>
     <div class="form">
-        <div class="title">Agregar noticia</div>
+        <div class="title">
+            <div>Agregar noticia</div>  
+            <div>  
+                <a href="baja_noticia.php" ><button class="return" type='submit'><i class="fa-sharp fa-solid fa-arrow-left"></i></button></a>
+            </div>
+        </div>
         <div class="subtitle">Por favor ingrese los datos de la noticia</div>
         <form method='post'>
             <div class="input-container ic1">
