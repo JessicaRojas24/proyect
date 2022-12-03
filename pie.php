@@ -15,9 +15,10 @@
         Aviso de Privacidad | Derecho de Réplica | Términos y Condiciones <br>
         <div class="img_footer">
             <img src='https://publicsite-wordpress-storage.insiderintelligence.com/wp-content/uploads/2022/09/14151149/cheddarNEWS_primary_hor.png' height="50"> <br><br><br><br>
-            <img src='https://cdn.icon-icons.com/icons2/1109/PNG/512/1486053608-facebook_79182.png' height="50">
-            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png' height="50">
-            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/800px-Twitter-logo.svg.png' height="50">
+            <a target="_blank" href="https://www.facebook.com/JessyGundersen0124/"><img class="iconos" src='noticias/facebook.png' height="50"></a>
+            <a target="_blank" href="https://github.com/JessicaRojas24"><img class="iconos" src='noticias/github.png' height="50"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/jessica-rojas-torres-6b4529258/"><img class="iconos" src='noticias/linkedin.png' height="50"></a>
+            <a target="_blank" href="https://www.instagram.com/jessyglazier/"><img class="iconos" src='noticias/instagram.png' height="50"></a>
 
         </div>
     </div>
