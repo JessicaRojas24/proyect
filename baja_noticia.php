@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>cheddar news</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheddar News</title>
+    <link rel="shortcut icon" href="noticias/C-Logo.png">
 <link rel="stylesheet" href="tablas.css">
 <script src="https://kit.fontawesome.com/c49750f9a4.js" crossorigin="anonymous"></script>
 
