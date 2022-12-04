@@ -7,7 +7,13 @@
     <title>Cheddar News</title>
     <link rel="shortcut icon" href="noticias/C-Logo.png">
     <link rel="stylesheet" href="login_style.css">
-    
+    <script src="https://kit.fontawesome.com/c49750f9a4.js" crossorigin="anonymous"></script>
+    <script>
+        function()
+        {
+
+        }
+    </script>
 </head>
 <body id="body_login">
 
@@ -52,23 +58,20 @@ $row = $result->fetch_assoc();
     }
     else
     {
-        echo "<div style='color:red;'> Usuario o Contraseña Incorrecto </div>";
+        echo "<script> 
+        alert('Usuario o Contraseña Incorrecto.');
+    </script>";
+        #echo "<div style='color:red;'> Usuario o Contraseña Incorrecto </div>";
     }
     
 }
 ?>
-    <!--<div id="body_login">
-        <img id="img_login" src="noticias/icologin.png" height="300px"><br>
-        <form method='post' id="main_login">
-            <h2>Nombre:<h2> <input class="btn_user" type='text' name='user'><br><br>
-            <h2>Contraseña:<h2><input class="btn_pass" type='password' name='pass'><br><br>
-            <input class="btn_submit" type='submit' name='OK'>
-        </form>
-    </div>
--->
     <div class="form">
+    <div class="title_form">
+            <a href="index.php"><button class="return" type='submit'><i class="fa-sharp fa-solid fa-arrow-left"></i></button></a>
+        </div>
       <div class="title">Welcome</div>
-      <div class="subtitle" id="login_Error_Message"></div>
+      <div class="subtitle" id="login_Error_Message" style="visibility: hidden;">Usuario o Contraseña Incorrecto</div>
       <form method="post">
         <div class="input-container ic1">
             <input id="username" class="input" type="text"  name='user' placeholder=" " />

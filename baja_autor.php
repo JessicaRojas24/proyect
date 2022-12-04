@@ -57,6 +57,7 @@ echo"<div>Se borró el registro</div>";
         <thead>
             <tr>
                 <th class="text-left">Autor</th>
+                <th class="text-left">Correo</th>
                 <th class="text-left">Borrar</th>
             </tr>
         </thead>
@@ -65,13 +66,15 @@ echo"<div>Se borró el registro</div>";
                 <?php
 
                 $con = mysqli_connect('localhost', 'root', 'toor2022', 'notiweb');
-                $sql = "select ID,Nombre from autores";
+                $sql = "select ID,Nombre,Correo from autores";
                 $result = mysqli_query($con, $sql);
 
                 while ($r = mysqli_fetch_assoc($result)) {
                 ?>
             <tr>
-                <?php echo "<td>{$r['Nombre']}  </td> "; ?>
+                <?php echo "<td>{$r['Nombre']}  </td> "; 
+                    echo "<td>{$r['Correo']}  </td> "
+                ?>
                 <td class='text-center'>
                     <div class='interior'>
                         <?php echo "

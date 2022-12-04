@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheddar News</title>
     <link rel="shortcut icon" href="noticias/C-Logo.png">
-    <link rel="stylesheet" href="panel_style.css">
+    <link rel="stylesheet" href="noticia_style.css">
     <script src="https://kit.fontawesome.com/c49750f9a4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
     <div class="form">
-    <div>
-        <a href="baja_autor.php"><button class="return" type='submit'><i class="fa-sharp fa-solid fa-arrow-left"></i></button></a>
-    </div>
-        <div class="title">Agregar autores</div>
+    <div class="title">
+            <div>Agregar Autores</div>
+            <div>
+                <a href="baja_noticia.php"><button class="return" type='submit'><i
+                            class="fa-sharp fa-solid fa-arrow-left"></i></button></a>
+            </div>
+        </div>
         <div class="subtitle">Por favor ingrese un nombre de autor y correo</div>
         <form method='post'>
             <div class="input-container ic1">

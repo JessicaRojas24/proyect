@@ -47,7 +47,7 @@ div.table-title {
   }
   
   .submit:active {
-    background-color: #06b;
+    background-color: #460024;
   }
 
 
@@ -87,6 +87,7 @@ th:first-child {
 th:last-child {
     border-top-right-radius: 3px;
     border-right: none;
+    width: 70px;
 }
 
 tr {

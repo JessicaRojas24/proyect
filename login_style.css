@@ -119,6 +119,24 @@ body {
   }
   
   .submit:active {
-    background-color: #06b;
+    background-color: #460024;
   }
   
+  .return {
+    background-color: #460024;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    width: 30%;
+  }
+  
+  .title_form {
+    width: 70%;
+    padding-left: 80%;
+  }
