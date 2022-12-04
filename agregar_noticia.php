@@ -9,9 +9,10 @@
     <link rel="shortcut icon" href="noticias/C-Logo.png">
     <link rel="stylesheet" href="noticia_style.css">
     <script src="https://kit.fontawesome.com/c49750f9a4.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script type="application/javascript">
         function cargar() {
-            document.getElementById('imagen').onchange = function() {
+            document.getElementById('imagen').onchange = function () {
                 console.log(this.value);
                 document.getElementById('archivo').innerHTML = this.value;
             }
@@ -62,9 +63,24 @@ if(isset($_POST['titulo']))
                 <label for="titulo" class="placeholder">Titulo</label>
             </div>
             <div class="input-container ic2">
-                <input id="autor" class="input" type="text" name='autor' <?php if(isset($B))?> placeholder=" " />
-                <div class="cut cut-short"></div>
-                <label for="autor" class="placeholder">Autor</>
+                <div class="select">
+                    <select id="autor" name="autor" <?php if(isset($B))?>>
+                        <option value="0">Autor</option>
+                        <?php
+                    $con=mysqli_connect('localhost','root','toor2022','notiweb');
+                    $sql = "SELECT ID, Nombre FROM autores";
+                    $result = mysqli_query($con, $sql);
+                    while($r = mysqli_fetch_assoc($result))
+                    {
+                ?>
+                        <option value="<?php echo $r['ID']?>">
+                            <?php echo $r['Nombre'] ?>
+                        </option>
+                        <?php
+                    }
+                    ?>
+                    </select>
+                </div>
             </div>
             <div class="input-container ic3">
                 <input id="cuerpo" class="input" type="text" name='cuerpo' <?php if(isset($C))?> placeholder=" " />
@@ -72,10 +88,24 @@ if(isset($_POST['titulo']))
                 <label for="cuerpo" class="placeholder">Cuerpo</>
             </div>
             <div class="input-container ic4">
-                <input id="categoria" class="input" type="text" name='categoria' <?php if(isset($D))?> placeholder=" "
-                />
-                <div class="cut cut-short"></div>
-                <label for="categoria" class="placeholder">Categoria</>
+                <div class="select">
+                    <select id="categoria" name="categoria" <?php if(isset($D))?>>
+                        <option value="0">Categoria</option>
+                        <?php
+                    $con=mysqli_connect('localhost','root','toor2022','notiweb');
+                    $sql = "SELECT ID, Nombre FROM categoria";
+                    $result = mysqli_query($con, $sql);
+                    while($r = mysqli_fetch_assoc($result))
+                    {
+                ?>
+                        <option value="<?php echo $r['ID']?>">
+                            <?php echo $r['Nombre'] ?>
+                        </option>
+                        <?php
+                    }
+                    ?>
+                    </select>
+                </div>
             </div>
             <div class="input-container ic5">
                 <input id="fecha" class="input" type="date" name='fecha' <?php if(isset($E))?> placeholder=" " />
