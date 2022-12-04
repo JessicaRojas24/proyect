@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="noticia_style.css">
     <script src="https://kit.fontawesome.com/c49750f9a4.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
