@@ -10,25 +10,25 @@
 <head>
     <script>
         function confirmar() {
-            document.getElementById("open-modal")   ;
+            document.getElementById("open-modal");
             if (confirm("¿Esta seguro que desea eliminar?")) {
                 return true;
-            }else{
+            } else {
                 return false;
-            }      
+            }
         }
     </script>
 </head>
 
 <body>
     <?php
-        if (isset($_GET['id'])) {
-            $x = intval($_GET['id']);
-            $con = mysqli_connect('localhost', 'root', 'toor2022', 'notiweb');
-            $sql = "delete from noticias where ID={$x}";
-            $result = mysqli_query($con, $sql);
-            echo "<div>Se borró el registro</div>";
-        }
+    if (isset($_GET['id'])) {
+        $x = intval($_GET['id']);
+        $con = mysqli_connect('localhost', 'root', 'toor2022', 'notiweb');
+        $sql = "delete from noticias where ID={$x}";
+        $result = mysqli_query($con, $sql);
+        echo "<div>Se borró el registro</div>";
+    }
 
     ?>
     <div class="table-title">
@@ -36,8 +36,14 @@
             <h3>Tabla de noticias</h3>
         </div>
         <div>
-            <a href='agregar_noticia.php'><button class="submit" type='submit'><i class="fa-sharp fa-solid fa-plus"></i>    Agregar Noticia</button></a>
+            <a href='agregar_noticia.php'><button class="submit" type='submit'><i class="fa-sharp fa-solid fa-plus"></i>
+                    Agregar Noticia</button></a>
         </div>
+        <div>
+            <a href='admin.php'><button class="submit" type='submit'><i class="fa-sharp fa-solid fa-arrow-left"></i>
+                    Regresar</button></a>
+        </div>
+    </div>
     </div>
     <table class="table-fill">
         <thead>
@@ -49,13 +55,13 @@
         <tbody class="table-hover">
             <tr>
                 <?php
-                   
-                    $con = mysqli_connect('localhost', 'root', 'toor2022', 'notiweb');
-                    $sql = "select ID,Titulo from noticias";
-                    $result = mysqli_query($con, $sql);
 
-                    while ($r = mysqli_fetch_assoc($result)) {
-                    ?>
+                $con = mysqli_connect('localhost', 'root', 'toor2022', 'notiweb');
+                $sql = "select ID,Titulo from noticias";
+                $result = mysqli_query($con, $sql);
+
+                while ($r = mysqli_fetch_assoc($result)) {
+                ?>
             <tr>
                 <?php echo "<td>{$r['Titulo']}  </td> "; ?>
                 <td class='text-center'>
@@ -66,8 +72,8 @@
                 </td>
             </tr>
             <?php
-                    }
-                    ?>
+                }
+                ?>
             </tr>
         </tbody>
     </table>

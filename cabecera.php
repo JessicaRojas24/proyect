@@ -4,6 +4,7 @@
     <title> cheddar news</title>
     <link rel="stylesheet" href="index.css">
     <link rel="icon" href="https://cdn-profiles.tunein.com/s296280/images/logog.png?t=161851.png">
+    <script src="https://kit.fontawesome.com/c49750f9a4.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div>
@@ -17,7 +18,7 @@
             <li><a href="#news">Más noticias</a></li>
             <li><a href="#">Novedades</a></li>
             <li><a href="#">Conócenos</a></li>
-            <li><a href="login.php"><img class="icon_login" src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" height="40px" width="40px"></a></li>
+            <li><a href="login.php">Log in <i class="fa-solid fa-user-large"></i></a></li>
         </ul>
     </nav>
     </div>

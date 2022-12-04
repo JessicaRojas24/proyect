@@ -48,9 +48,9 @@
                         <div> <img class="img_news" height='180' src="noticias/<?php echo $r['Imagen']?>"></div>
                     </div>
                     <div>
-                        <div><h2> <?php echo $r['Titulo'] ?> <h2></div>
-                        <div> <?php echo $r['Nombre'] ?></div>
-                        <div> <?php echo $r['fecha'] ?></div>
+                        <div class="titulo_noticia"> <?php echo $r['Titulo'] ?> </div>
+                        <div class="noticia"> <?php echo $r['Nombre'] ?></div>
+                        <div class="fecha"> <?php echo $r['fecha'] ?></div>
                         <br>
                         <div> <?php echo "<a href='vernoticia.php?id={$r['id']}'> <button class='btn_Leer'>LEER NOTICIA </button></a>" ?></div>
                     </div>
@@ -60,6 +60,7 @@
             ?>
             </div>
             <div id="anuncios">
+                <div class="title_anuncios">Anuncios</div>
                 <img class="img_news" src="https://as01.epimg.net/meristation/imagenes/2020/06/04/noticias/1591281373_841145_1591281661_noticia_normal.jpg" height="150px">
                 <img class="img_news" src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/11/15/15738391629775.jpg" height="150px">
                 <img class="img_news" src="https://www.oberlo.com/media/1624032423-anuncios-publicitarios-ejemplos-de-publicidad-recordatoria.png?fit=max&fm=jpg&w=1440" height="150px">

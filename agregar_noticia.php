@@ -28,6 +28,7 @@ if(isset($_POST['titulo']))
     $sql="INSERT INTO noticias (titulo, autor, cuerpo, categoria, fecha, imagen)
         VALUE ('{$A}','{$B}','{$C}','{$D}','{$E}','{$F}')";
         $result=mysqli_query($conx, $sql);
+    echo "<meta http-equiv='refresh' content='1; url=baja_noticia.php'>";
 
 }
 /*include"cabecera.php";
@@ -49,9 +50,10 @@ if(isset($_POST['titulo']))
     </form>-->
     <div class="form">
         <div class="title">
-            <div>Agregar noticia</div>  
-            <div>  
-                <a href="baja_noticia.php" ><button class="return" type='submit'><i class="fa-sharp fa-solid fa-arrow-left"></i></button></a>
+            <div>Agregar noticia</div>
+            <div>
+                <a href="baja_noticia.php"><button class="return" type='submit'><i
+                            class="fa-sharp fa-solid fa-arrow-left"></i></button></a>
             </div>
         </div>
         <div class="subtitle">Por favor ingrese los datos de la noticia</div>
@@ -71,22 +73,34 @@ if(isset($_POST['titulo']))
                 <div class="cut cut-short"></div>
                 <label for="cuerpo" class="placeholder">Cuerpo</>
             </div>
-            <div class="input-container ic3">
-                <input id="categoria" class="input" type="text" name='categoria' <?php if(isset($D))?> placeholder=" " />
+            <div class="input-container ic4">
+                <input id="categoria" class="input" type="text" name='categoria' <?php if(isset($D))?> placeholder=" "
+                />
                 <div class="cut cut-short"></div>
                 <label for="categoria" class="placeholder">Categoria</>
             </div>
-            <div class="input-container ic3">
+            <div class="input-container ic5">
                 <input id="fecha" class="input" type="date" name='fecha' <?php if(isset($E))?> placeholder=" " />
                 <div class="cut cut-short"></div>
                 <label for="fecha" class="placeholder">Fecha</>
             </div>
-            <div class="input-container ic3">
+            <div class="input-container ic6">
                 <input id="imagen" class="input" type="text" name='imagen' <?php if(isset($F))?> placeholder=" " />
                 <div class="cut cut-short"></div>
                 <label for="imagen" class="placeholder">Imagen</>
             </div>
+
+
+            <div class="input-container ic7">
+                <input id="imagen" class="input"type="POST" name="imagen" enctype="multipart/formdata">
+                <input type="file" name="imagen" />
+                <div class="cut cut-short"></div>
+                <label for="imagen" class="placeholder">Imagen</>
+            </div>
+
+
             <input class="submit" type='submit' name='OK' value='Enviar'>
+
         </form>
 
         <?php

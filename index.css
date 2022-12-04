@@ -86,6 +86,7 @@ li a.active, li a:hover{
     border-radius: 10px;
     margin-bottom: 10px;
     padding: 25px;
+    
 
 }
 
@@ -93,17 +94,21 @@ li a.active, li a:hover{
     line-height: 2;
     font-size: 20px;
     text-align: justify;
-    color:black;
-    
+    color:#fff;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
 }
 
 .title {
     text-align: left;
-    color:black;
+    color:#fff;
+    padding-left: 50px;
+    padding-right: 50px; ;
 }
 
 .image {
-    display: block;
+    
     border: 6px outset #353535;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -224,3 +229,38 @@ button{
     margin-left: 10px;
     margin-right: 15px;
 }
+
+.return {
+    background-color: #460024;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    width: 15%;
+  }
+
+  .noticia{
+    color: #fff;
+    padding-top: 10px;
+  }
+
+  .titulo_noticia{
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .fecha{
+    color: #fff;
+    padding-top: 7px;
+  }
+
+  .title_anuncios{
+    font-size: 35px;
+    color: #fff;
+    padding-bottom: 30px;
+  }
