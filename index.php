@@ -24,11 +24,10 @@
                 $sql="select * from noticias Where id=1";
         ?>
         <div id="main_new">
-            <div> <img class="img_news" height='400' src="noticias/<?php echo $r['Imagen']?>"></div>
+            <div>  <img class="img_news" src="data:<?php echo $r['tipo']; ?>;base64,<?php echo  base64_encode($r['Imagen']); ?>"></div>
             <h1 class="title" > <?php echo $r['Titulo'] ?> </h1>
             <div> <?php echo $r['Nombre'] ?></div>
             <p class="text"> <?php echo $r['Cuerpo'] ?></p>
-
         </div>
         <?php
             }
@@ -39,7 +38,7 @@
             <?php
                 #include('cabecera.php');
                 $con=mysqli_connect('localhost','root','toor2022','notiweb');
-                $sql = "SELECT Titulo,Imagen,Nombre,fecha,noticias.id FROM noticias INNER JOIN autores ON noticias.autor=autores.id WHERE noticias.id >1 order by fecha desc LIMIT 0,11";
+                $sql = "SELECT Titulo,Imagen,Nombre,fecha,noticias.id,tipo FROM noticias INNER JOIN autores ON noticias.autor=autores.id WHERE noticias.id >1 order by fecha desc LIMIT 0,11";
                 $result = mysqli_query($con, $sql);
                 while($r = mysqli_fetch_assoc($result))
                 {
@@ -47,7 +46,7 @@
 
                 <div class="container">
                     <div>
-                        <div> <img class="img_news" height='180' src="noticias/<?php echo $r['Imagen']?>"></div>
+                        <img class="img_news" width='300' src="data:<?php echo $r['tipo']; ?>;base64,<?php echo  base64_encode($r['Imagen']); ?>"></img>
                     </div>
                     <div>
                         <div class="titulo_noticia"> <?php echo $r['Titulo'] ?> </div>

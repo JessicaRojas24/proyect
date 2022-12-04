@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,15 @@
     <link rel="shortcut icon" href="noticias/C-Logo.png">
     <link rel="stylesheet" href="noticia_style.css">
     <script src="https://kit.fontawesome.com/c49750f9a4.js" crossorigin="anonymous"></script>
-    
+    <script type="application/javascript">
+        function cargar() {
+            document.getElementById('imagen').onchange = function() {
+                console.log(this.value);
+                document.getElementById('archivo').innerHTML = this.value;
+            }
+        }
+    </script>
+
 </head>
 
 <body>
@@ -22,33 +31,21 @@ if(isset($_POST['titulo']))
     $C=$_POST['cuerpo'];
     $D=$_POST['categoria'];
     $E=$_POST['fecha'];
-    $F=$_POST['imagen'];
-
-
+    $F = $_FILES['imagen']['name'];
+    $tamanoArchivo = $_FILES['imagen']['size'];
+    $tipoArchivo = $_FILES['imagen']['type'];
     $conx = mysqli_connect ('localhost', 'root', 'toor2022','notiweb');
-    $sql="INSERT INTO noticias (titulo, autor, cuerpo, categoria, fecha, imagen)
-        VALUE ('{$A}','{$B}','{$C}','{$D}','{$E}','{$F}')";
-        $result=mysqli_query($conx, $sql);
+
+    $imagenSubida = fopen($_FILES['imagen']['tmp_name'], 'r');
+    $binariosImagen = fread($imagenSubida, $tamanoArchivo);
+    $binariosImagen = mysqli_escape_string($conx, $binariosImagen);    
+    $sql="INSERT INTO noticias (titulo, autor, cuerpo, categoria, fecha, imagen, tipo)
+        VALUE ('{$A}','{$B}','{$C}','{$D}','{$E}','{$binariosImagen}','{$tipoArchivo}')";
+    $result=mysqli_query($conx, $sql);
     echo "<meta http-equiv='refresh' content='1; url=baja_noticia.php'>";
 
 }
-/*include"cabecera.php";
-    echo"<div>Menú: </div>";
-    echo"<div><a href='agregar_noticia.php'>Agregar Noticia</a></div>";
-*/
-
 ?>
-
-
-    <!--<form method='post'>
-        Titulo: <input type="text" name='titulo' size='100'><br>
-        Autor: <input type="text" name='autor' size='100'><br>
-        Cuerpo: <input type='text' name='cuerpo' size='200'><br>
-        Categoria: <input type="text" name='categoria' size='100'><br>
-        Fecha: <input type="date" name='fecha' size='100'><br>
-        Imagen: <input type="text" name='imagen' size='100'><br>
-        <input type='submit' value='Guardar'>
-    </form>-->
     <div class="form">
         <div class="title">
             <div>Agregar noticia</div>
@@ -58,7 +55,7 @@ if(isset($_POST['titulo']))
             </div>
         </div>
         <div class="subtitle">Por favor ingrese los datos de la noticia</div>
-        <form method='post'>
+        <form method='post' enctype="multipart/form-data">
             <div class="input-container ic1">
                 <input id="titulo" class="input" type="text" name='titulo' <?php if(isset($A))?> placeholder=" " />
                 <div class="cut"></div>
@@ -85,29 +82,18 @@ if(isset($_POST['titulo']))
                 <div class="cut cut-short"></div>
                 <label for="fecha" class="placeholder">Fecha</>
             </div>
-            <div class="input-container ic6">
-                <input id="imagen" class="input" type="text" name='imagen' <?php if(isset($F))?> placeholder=" " />
-                <div class="cut cut-short"></div>
-                <label for="imagen" class="placeholder">Imagen</>
+
+            <div class="file-container">
+                <div class="custom-input-file">
+                    <input type="file" id="imagen" name="imagen" class="input-file" value="archivo" onclick="cargar()">
+                    <label id="archivo" for="archivo" class="placeholder">Subir archivo...</>
+                </div>
             </div>
-
-
-            <div class="input-container ic7">
-                <input id="imagen" class="input"type="POST" name="imagen" enctype="multipart/formdata">
-                <input type="file" name="imagen" />
-                <div class="cut cut-short"></div>
-                <label for="imagen" class="placeholder">Imagen</>
-            </div>
-
 
             <input class="submit" type='submit' name='OK' value='Enviar'>
 
         </form>
-
-        <?php
-
-/*include("pie.php");*/
-?>
+    </div>
 </body>
 
 </html>
